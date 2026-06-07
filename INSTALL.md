@@ -74,7 +74,7 @@ Each script reads from `data/` and writes to `output/` (JSON/CSV) or
 | 6 | `probe_c_interlock.py`     | `probe_c_interlock.json`, `fig_interlock_ccdf.csv` |
 | 7 | `probe_d_place_decoupling.py` | `probe_d_place_decoupling.json` (+`_points.csv`) |
 | 8 | `opacity_concentration.py` | `opacity_concentration.json`, `fig_{officer,intermediary}_ccdf.csv` |
-| 9 | `opacity_by_jurisdiction.py` | `opacity_by_jurisdiction.json`, `opacity_by_source.csv` |
+| 9 | `opacity_by_jurisdiction.py` | `opacity_by_jurisdiction.json`, `opacity_by_source.csv`, `opacity_by_jurisdiction.csv` |
 | 10 | `opacity_disentangle.py`   | `opacity_disentangle.json` |
 | 11 | `hierarchical_icc.py`     | `hierarchical_icc.json` |
 | 12 | `csn_powerlaw.py`         | `csn_powerlaw.json` |

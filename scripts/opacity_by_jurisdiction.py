@@ -31,12 +31,21 @@ oo['secrecy'] = oo['juris'].isin(secrecy)
 by_src = oo.groupby('src')['ubo'].agg(n='size', ubo_rate=lambda s: 100 * s.mean()).sort_values('ubo_rate', ascending=False)
 by_src.reset_index().to_csv(os.path.join(OUT, 'opacity_by_source.csv'), index=False)
 
+# Recording rate by entity jurisdiction (so the registry-end of the bimodality
+# -- e.g. the Malta public register at 0% -- is itself recomputable, not a bare
+# number in the text). Sorted by link count; full table written to CSV.
+by_jur = oo.groupby('juris')['ubo'].agg(n='size', ubo_rate=lambda s: 100 * s.mean()).sort_values('n', ascending=False)
+by_jur.reset_index().to_csv(os.path.join(OUT, 'opacity_by_jurisdiction.csv'), index=False)
+malta = by_jur.loc['Malta'] if 'Malta' in by_jur.index else None
+
 out = {
     'overall_ubo_pct': float(100 * oo['ubo'].mean()),
     'secrecy_ubo_pct': float(100 * oo[oo['secrecy']]['ubo'].mean()),
     'nonsecrecy_ubo_pct': float(100 * oo[~oo['secrecy']]['ubo'].mean()),
     'maskable_roles_pct': float(100 * oo['link'].str.lower().fillna('').str.contains('shareholder|director|secretary|nominee').mean()),
+    'malta_registry': None if malta is None else {'n': int(malta['n']), 'ubo_rate': float(malta['ubo_rate'])},
     'top_sources': by_src.head(12).round(2).to_dict('index'),
+    'top_jurisdictions': by_jur.head(12).round(4).to_dict('index'),
 }
 with open(os.path.join(OUT, 'opacity_by_jurisdiction.json'), 'w') as f:
     json.dump(out, f, indent=2, default=str)

@@ -3,6 +3,10 @@
   "secrecy_ubo_pct": 2.0735811045160144,
   "nonsecrecy_ubo_pct": 10.776479577218172,
   "maskable_roles_pct": 71.59426793392302,
+  "malta_registry": {
+    "n": 565269,
+    "ubo_rate": 0.0
+  },
   "top_sources": {
     "Pandora Papers - Commence Overseas": {
       "n": 4054,
@@ -51,6 +55,56 @@
     "Panama Papers": {
       "n": 309357,
       "ubo_rate": 0.03
+    }
+  },
+  "top_jurisdictions": {
+    "Malta": {
+      "n": 565269,
+      "ubo_rate": 0.0
+    },
+    "British Virgin Islands": {
+      "n": 387987,
+      "ubo_rate": 7.5843
+    },
+    "Bermuda": {
+      "n": 169486,
+      "ubo_rate": 0.223
+    },
+    "Barbados": {
+      "n": 142732,
+      "ubo_rate": 0.0014
+    },
+    "Aruba": {
+      "n": 63584,
+      "ubo_rate": 0.0
+    },
+    "Undetermined": {
+      "n": 62479,
+      "ubo_rate": 0.12
+    },
+    "Panama": {
+      "n": 62096,
+      "ubo_rate": 0.2963
+    },
+    "Samoa": {
+      "n": 53537,
+      "ubo_rate": 0.3045
+    },
+    "Bahamas": {
+      "n": 52294,
+      "ubo_rate": 0.0421
+    },
+    "Cayman Islands": {
+      "n": 43288,
+      "ubo_rate": 0.7693
+    },
+    "Seychelles": {
+      "n": 30612,
+      "ubo_rate": 1.5059
+    },
+    "Cook Islands": {
+      "n": 19230,
+      "ubo_rate": 2.7925
     }
   }
 }

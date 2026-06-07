@@ -16,7 +16,7 @@ Each script reads from `data/` and writes JSON/CSV to `output/` (figures to
 | 6 | `probe_c_interlock.py`      | corporate_directors/ | probe_c_interlock.json, fig_interlock_ccdf.csv |
 | 7 | `probe_d_place_decoupling.py` | tract_outcomes_simple.csv | probe_d_place_decoupling.json (+_points.csv) |
 | 8 | `opacity_concentration.py`  | offshore_leaks/relationships.csv | opacity_concentration.json, fig_{officer,intermediary}_ccdf.csv |
-| 9 | `opacity_by_jurisdiction.py`| offshore_leaks/ | opacity_by_jurisdiction.json, opacity_by_source.csv |
+| 9 | `opacity_by_jurisdiction.py`| offshore_leaks/ | opacity_by_jurisdiction.json, opacity_by_source.csv, opacity_by_jurisdiction.csv |
 | 10 | `opacity_disentangle.py`   | offshore_leaks/ | opacity_disentangle.json |
 | 11 | `hierarchical_icc.py`      | wid_individual_atoms.csv | hierarchical_icc.json |
 | 12 | `csn_powerlaw.py`          | corporate_directors/, offshore_leaks/relationships.csv | csn_powerlaw.json |

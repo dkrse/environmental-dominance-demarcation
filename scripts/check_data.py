@@ -8,6 +8,8 @@ import os, sys, hashlib
 from _paths import DATA
 
 SUMS = os.path.join(DATA, 'SHA256SUMS')
+# Non-data helper files that live under data/ but are not pinned inputs.
+IGNORE = {'SHA256SUMS', 'download_large_files.sh'}
 
 def sha256(path, buf=1 << 20):
     h = hashlib.sha256()
@@ -32,11 +34,11 @@ def main():
         sys.exit(f'ERROR: checksum manifest not found: {SUMS}')
     expected = load_manifest()
 
-    # Files actually present (excluding the manifest itself).
+    # Files actually present (excluding the manifest and helper scripts).
     present = set()
     for root, _, files in os.walk(DATA):
         for name in files:
-            if name == 'SHA256SUMS':
+            if name in IGNORE:
                 continue
             present.add(os.path.relpath(os.path.join(root, name), DATA))
 
