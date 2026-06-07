@@ -1,0 +1,28 @@
+{
+  "n_sentinels": 12,
+  "sentinel_countries": [
+    "BRA",
+    "CHL",
+    "COL",
+    "CRI",
+    "DOM",
+    "ECU",
+    "MEX",
+    "PER",
+    "SLV"
+  ],
+  "sentinel_weight_share_pct": 0.6461283695748848,
+  "with_sentinels": {
+    "between": 1.8061086406098967,
+    "within": 4.0701882895904555,
+    "total": 5.876296930200352
+  },
+  "without_sentinels": {
+    "between": 1.7491049172651083,
+    "within": 3.0723926825115178,
+    "total": 4.821497599776626
+  },
+  "within_inflation": 0.9977956070789378,
+  "within_inflation_pct": 24.514728461845596,
+  "published_within": 3.289
+}

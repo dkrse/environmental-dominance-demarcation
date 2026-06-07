@@ -1,0 +1,21 @@
+{
+  "genuine_floor": -12.227812892172588,
+  "with_sentinels": {
+    "between": 1.8061086406098967,
+    "within": 4.0701882895904555,
+    "total": 5.876296930200352
+  },
+  "imputed_at_floor": {
+    "between": 1.7494072186473006,
+    "within": 3.402669549384301,
+    "total": 5.152076768031602
+  },
+  "without_sentinels": {
+    "between": 1.7491049172651083,
+    "within": 3.0723926825115178,
+    "total": 4.821497599776626
+  },
+  "published_within": 3.289,
+  "within_range_low": 3.0723926825115178,
+  "within_range_high": 4.0701882895904555
+}

@@ -1,0 +1,41 @@
+{
+  "interlock": {
+    "n": 321410,
+    "xmin": 14.0,
+    "n_tail": 150705,
+    "alpha": 2.955208242167952,
+    "alpha_se": 0.0050365040634345395,
+    "ks_D": 0.054949854872999804,
+    "LR_vs_lognormal": -40.595794994544676,
+    "p_vs_lognormal": 0.0,
+    "LR_vs_exponential": 12.52288659305827,
+    "p_vs_exponential": 5.596222135288714e-36,
+    "power_law_favoured_over_lognormal": false
+  },
+  "officer_of": {
+    "n": 770370,
+    "xmin": 13.0,
+    "n_tail": 10264,
+    "alpha": 2.253475672494969,
+    "alpha_se": 0.012372503572631739,
+    "ks_D": 0.006336902040480319,
+    "LR_vs_lognormal": -0.7602769765429016,
+    "p_vs_lognormal": 0.44708904101015756,
+    "LR_vs_exponential": 6.9512752111926,
+    "p_vs_exponential": 3.6199887439139567e-12,
+    "power_law_favoured_over_lognormal": true
+  },
+  "intermediary_of": {
+    "n": 26608,
+    "xmin": 4.0,
+    "n_tail": 6970,
+    "alpha": 1.6813735788282174,
+    "alpha_se": 0.008161479613839166,
+    "ks_D": 0.026696317963190164,
+    "LR_vs_lognormal": -4.012710448414197,
+    "p_vs_lognormal": 6.0025524292901895e-05,
+    "LR_vs_exponential": 14.916444517544413,
+    "p_vs_exponential": 2.5764063725827743e-50,
+    "power_law_favoured_over_lognormal": false
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "basis": "sentinel-free atoms",
+  "V_between": 1.7491049172651083,
+  "V_within": 3.0723926825115178,
+  "V_total": 4.821497599776626,
+  "share_between_pct": 36.27721223683991,
+  "share_within_pct": 63.72278776316009,
+  "icc_country": 0.36277212236839906,
+  "icc_country_ci95": [
+    0.25507665408961194,
+    0.49045706115078924
+  ],
+  "n_countries": 195
+}

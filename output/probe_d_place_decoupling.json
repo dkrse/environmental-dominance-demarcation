@@ -1,0 +1,21 @@
+{
+  "n_tracts": 71409,
+  "n_cz": 741,
+  "parental_rank_held_fixed": "p25",
+  "mean_child_rank_at_p25": 0.40463766521341155,
+  "total_cross_place_var": 0.004229604967536621,
+  "sampling_noise_var": 0.0003870225273358677,
+  "V_env_reliable": 0.0038425824402007532,
+  "reliability": 0.9084967673562019,
+  "sd_place_effect_rank": 0.06198856701199628,
+  "place_effect_p10": 0.3228434,
+  "place_effect_p50": 0.40408006,
+  "place_effect_p90": 0.49066618,
+  "place_effect_p10_p90_gap_pts": 16.782278,
+  "capability_side": {
+    "V_cap_naive_se_sqrt_n": 0.18675202932877047,
+    "rank_var_upper_bound": 0.08333333333333333,
+    "recoverable": false,
+    "note": "se*sqrt(count) exceeds the 1/12 bound on a rank variance, so it does not recover an individual capability SD; no clean V_env/V_k dominance ratio can be formed."
+  }
+}

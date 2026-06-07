@@ -1,0 +1,9 @@
+{
+  "n": 435,
+  "slope_se": 0.7208749395659457,
+  "observed_slope": 1.381604508421903,
+  "mde_slope_80pct_power": 2.0235528974851302,
+  "predicted_slope": 1.0,
+  "power_to_detect_slope1_vs_0": 0.28277548998867275,
+  "note": "Predicted slope (1) is far below the minimum detectable slope; the test is underpowered, so slope=0 and slope=1 are both unrejectable. This is non-resolution, not an empty coupling."
+}

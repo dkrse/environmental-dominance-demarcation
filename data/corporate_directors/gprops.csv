@@ -1,0 +1,7 @@
+# prop_name, value
+name,corporate_directors
+description,"Bipartite network of directors and the companies on whose boards they sit, spanning 54 countries worldwide, constructed from data collected by the Financial Times (c. Sept. 2016). Person nodes are annotated with age and gender. Company nodes are annotated with their country, sector, industry, and number of employees."
+citation,"['A. Evtushenko and M. T. Gastner, \"Beyond Fortune 500: Women in a Global Network of Directors.\" In H. Cherifi et al. (Eds.), Complex Networks and Their Applications VIII, Volume 1, pp. 586-598 (2020), https://arxiv.org/abs/1910.07441']"
+url,https://doi.org/10.5281/zenodo.3553442
+tags,"['Economic', 'Governance', 'Unweighted', 'Metadata']"
+directed,0.0

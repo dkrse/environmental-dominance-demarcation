@@ -1,0 +1,20 @@
+# Python
+**/__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+paper/
+
+texput.log
+
+
+# Data files exceeding GitHub's 100 MB per-file limit (regenerable from the
+# public ICIJ Offshore Leaks snapshot; see MANIFEST.md for source + SHA-256).
+data/offshore_leaks/relationships.csv
+data/offshore_leaks/nodes-entities.csv

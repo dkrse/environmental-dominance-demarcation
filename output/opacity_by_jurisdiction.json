@@ -1,0 +1,56 @@
+{
+  "overall_ubo_pct": 2.5502846211571204,
+  "secrecy_ubo_pct": 2.0735811045160144,
+  "nonsecrecy_ubo_pct": 10.776479577218172,
+  "maskable_roles_pct": 71.59426793392302,
+  "top_sources": {
+    "Pandora Papers - Commence Overseas": {
+      "n": 4054,
+      "ubo_rate": 99.9
+    },
+    "Pandora Papers - Alpha Consulting": {
+      "n": 2780,
+      "ubo_rate": 99.78
+    },
+    "Pandora Papers - Fidelity Corporate Services": {
+      "n": 3567,
+      "ubo_rate": 99.78
+    },
+    "Pandora Papers - Alem\u00e1n, Cordero, Galindo & Lee (Alcogal)": {
+      "n": 24601,
+      "ubo_rate": 99.16
+    },
+    "Pandora Papers - Overseas Management Company (OMC)": {
+      "n": 472,
+      "ubo_rate": 82.42
+    },
+    "Pandora Papers - CILTrust International": {
+      "n": 2080,
+      "ubo_rate": 57.84
+    },
+    "Pandora Papers - Trident Trust": {
+      "n": 6090,
+      "ubo_rate": 34.91
+    },
+    "Pandora Papers - Asiaciti Trust": {
+      "n": 237,
+      "ubo_rate": 2.95
+    },
+    "Paradise Papers - Appleby": {
+      "n": 247678,
+      "ubo_rate": 1.41
+    },
+    "Offshore Leaks": {
+      "n": 288681,
+      "ubo_rate": 0.62
+    },
+    "Pandora Papers - SFM Corporate Services": {
+      "n": 8440,
+      "ubo_rate": 0.07
+    },
+    "Panama Papers": {
+      "n": 309357,
+      "ubo_rate": 0.03
+    }
+  }
+}
