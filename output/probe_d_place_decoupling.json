@@ -16,6 +16,6 @@
     "V_cap_naive_se_sqrt_n": 0.18675202932877047,
     "rank_var_upper_bound": 0.08333333333333333,
     "recoverable": false,
-    "note": "se*sqrt(count) exceeds the 1/12 bound on a rank variance, so it does not recover an individual capability SD; no clean V_env/V_k dominance ratio can be formed."
+    "note": "population ranks are uniform => total variance 1/12; by the law of total variance the count-weighted average within-cell variance cannot exceed 1/12. se*sqrt(count) implies 0.187 > 1/12, so it does not recover an individual capability SD; no clean V_env/V_k dominance ratio can be formed."
   }
 }

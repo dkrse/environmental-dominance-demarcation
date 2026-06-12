@@ -20,12 +20,14 @@ What this probe CAN measure (cleanly):
 
 What this probe CANNOT measure, and says so:
   the capability term k. Recovering an individual within-cell SD from se*sqrt(n)
-  fails a hard bound check (a rank lives in [0,1], so its variance cannot exceed
-  1/12); 'count' is not a raw n and the SEs are shrinkage-based. So no clean
-  V_env / V_k dominance ratio can be formed -- the capability side resists
-  measurement here exactly as it does everywhere else in the series. The probe
-  therefore delivers a positive causal finding on the environment side, not a
-  dominance ratio.
+  fails a bound check: population income ranks are uniform by construction, so
+  their total variance is exactly 1/12, and by the law of total variance the
+  count-weighted average within-cell variance cannot exceed 1/12 (boundedness on
+  [0,1] alone would only give 1/4); 'count' is not a raw n and the SEs are
+  shrinkage-based. So no clean V_env / V_k dominance ratio can be formed -- the
+  capability side resists measurement here exactly as it does everywhere else in
+  the series. The probe therefore delivers a positive causal finding on the
+  environment side, not a dominance ratio.
 
 Reads data/tract_outcomes_simple.csv. Writes output/probe_d_place_decoupling.json
 and output/probe_d_place_decoupling_points.csv.
@@ -38,7 +40,9 @@ import pandas as pd, numpy as np
 from _paths import DATA, OUT
 
 COL, SE, CNT = 'kfr_pooled_pooled_p25', 'kfr_pooled_pooled_p25_se', 'pooled_pooled_count'
-RANK_VAR_MAX = 1.0 / 12.0  # variance of a Uniform(0,1) rank -- a hard upper bound
+RANK_VAR_MAX = 1.0 / 12.0  # population ranks are uniform by construction => total Var = 1/12;
+                           # by the law of total variance the count-weighted average within-cell
+                           # variance cannot exceed this (boundedness alone gives only 1/4)
 
 t = pd.read_csv(os.path.join(DATA, 'tract_outcomes_simple.csv'))
 d = t[[COL, SE, CNT, 'cz']].copy()
@@ -62,8 +66,10 @@ p10, p50, p90 = np.percentile(xr, [10, 50, 90])
 
 # --- CAPABILITY side: attempted and rejected ----------------------------------
 sd_child = s * np.sqrt(w)
+# count-weighted average within-cell variance == E[Var(rank | cell)], which the
+# law of total variance bounds by the total rank variance 1/12 (ranks uniform).
 V_cap_naive = float(np.average(sd_child ** 2, weights=w))
-cap_recoverable = bool(V_cap_naive <= RANK_VAR_MAX)  # hard sanity bound
+cap_recoverable = bool(V_cap_naive <= RANK_VAR_MAX)  # total-variance bound, not boundedness
 
 out = {
     'n_tracts': int(len(d)),
@@ -83,9 +89,11 @@ out = {
         'V_cap_naive_se_sqrt_n': V_cap_naive,
         'rank_var_upper_bound': RANK_VAR_MAX,
         'recoverable': cap_recoverable,
-        'note': ('se*sqrt(count) exceeds the 1/12 bound on a rank variance, so it '
-                 'does not recover an individual capability SD; no clean '
-                 'V_env/V_k dominance ratio can be formed.'),
+        'note': ('population ranks are uniform => total variance 1/12; by the law '
+                 'of total variance the count-weighted average within-cell variance '
+                 'cannot exceed 1/12. se*sqrt(count) implies 0.187 > 1/12, so it does '
+                 'not recover an individual capability SD; no clean V_env/V_k '
+                 'dominance ratio can be formed.'),
     },
 }
 
